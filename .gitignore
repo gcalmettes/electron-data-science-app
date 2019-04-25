@@ -107,4 +107,6 @@ venv.bak/
 ressources/icons
 ressources/scientificik.psd
 .DS_Store
+node_modules
+scientificik*
 
