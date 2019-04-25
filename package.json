@@ -1,0 +1,52 @@
+{
+  "name": "scienTiFiciK",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/main.js",
+  "scripts": {
+    "start": "npm run build:dev && PYTHON_API=file npm run serve:dev",
+    "cinstall": "npm install && npm run rebuild:electron",
+    "rebuild:electron": "electron-rebuild",
+    "generate:icons": "electron-icon-maker --input=ressources/scientificik.png --output=./ressources",
+    "build:dev": "NODE_ENV=development webpack --config utils/webpack.config.js --mode development",
+    "build:prod": "webpack --config utils/webpack.config.js --mode production",
+    "serve:dev": "NODE_ENV=development webpack-dev-server --config utils/webpack.config.js --mode development",
+    "serve:prod": "NODE_ENV=production webpack-dev-server --config utils/webpack.config.js --mode development",
+    "package:dist": "electron-packager . --overwrite --icon=\"ressources/icons/mac/icon.icns\" --ignore=\"app\" --ignore=\"node_modules\" --ignore=\"ressources\" --ignore=\"\\.DS_Store\" --ignore=\"package-lock.json\" --ignore=\"\\.sh\" --ignore=\"dist/start.and.watch.js\" --ignore=\"utils/start.and.watch.js\" --ignore=\"utils/webpack.config.js\"",
+    "run:main": "electron ."
+  },
+  "author": "Guillaume Calmettes",
+  "license": "ISC",
+  "homepage": "./",
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "chokidar": "^2.1.5",
+    "clean-webpack-plugin": "^2.0.1",
+    "css-loader": "^2.1.1",
+    "electron": "^4.1.4",
+    "electron-icon-maker": "0.0.4",
+    "electron-packager": "^13.1.1",
+    "electron-rebuild": "^1.8.4",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.6.0",
+    "node-loader": "^0.6.0",
+    "node-sass": "^4.11.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "sass-loader": "^7.1.0",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1",
+    "webpack-dev-server": "^3.3.1",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "dependencies": {
+    "grommet": "^2.6.6",
+    "grommet-icons": "^4.2.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "styled-components": "^4.2.0",
+    "zerorpc": "^0.9.8"
+  }
+}

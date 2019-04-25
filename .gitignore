@@ -102,3 +102,9 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# other
+ressources/icons
+ressources/scientificik.psd
+.DS_Store
+
