@@ -12,8 +12,8 @@
     "build:prod": "webpack --config utils/webpack.config.js --mode production",
     "serve:dev": "NODE_ENV=development webpack-dev-server --config utils/webpack.config.js --mode development",
     "serve:prod": "NODE_ENV=production webpack-dev-server --config utils/webpack.config.js --mode development",
-    "package:dist": "electron-packager . --overwrite --icon=\"ressources/icons/mac/icon.icns\" --ignore=\"app\" --ignore=\"node_modules\" --ignore=\"ressources\" --ignore=\"\\.DS_Store\" --ignore=\"package-lock.json\" --ignore=\"\\.sh\" --ignore=\"dist/start.and.watch.js\" --ignore=\"utils/start.and.watch.js\" --ignore=\"utils/webpack.config.js\"",
-    "run:main": "electron ."
+    "package:dist": "electron-packager . --overwrite --icon=\"ressources/icons/mac/icon.icns\" --ignore=\"app\" --ignore=\"node_modules\" --ignore=\"ressources\" --ignore=\"\\.DS_Store\" --ignore=\"package-lock.json\" --ignore=\"\\.sh\" --ignore=\"dist/start.and.watch.js\" --ignore=\"utils/start.and.watch.js\" --ignore=\"utils/webpack.config.js\" --ignore=\"requirements.txt\"",
+    "run:current": "electron ."
   },
   "author": "Guillaume Calmettes",
   "license": "ISC",
