@@ -49,9 +49,10 @@ const rendererCfg = {
   ],
   // devtool: 'cheap-source-map',
   devServer: {
-    hot: true,
+    // hot: true,
     contentBase: DIST_DIR,
     port: 3000,
+    watchContentBase: true,
     stats: {
       colors: true,
       chunks: false,
